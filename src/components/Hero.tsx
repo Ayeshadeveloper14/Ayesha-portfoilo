@@ -76,7 +76,7 @@ export const Hero = () => {
         >
           <div className="relative z-10 w-full max-w-[400px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/10 glass animate-float">
             <img 
-              src="pablic/ayesha.jfif" 
+              src="/ayesha.jfif" 
               alt="Ayesha" 
               className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
