@@ -7,10 +7,11 @@ export const About = () => {
     <section id="about" className="py-20 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+
+          {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, scale: 1 }}
             className="relative"
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden glass-card p-2">
@@ -29,10 +30,10 @@ export const About = () => {
             </div>
           </motion.div>
 
+          {/* Right Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               About <span className="text-gradient">Me</span>
@@ -49,6 +50,7 @@ export const About = () => {
               applications for clients worldwide.
             </p>
 
+            {/* Info Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
               {[
                 { label: "Name", value: "Ayesha" },
@@ -61,7 +63,9 @@ export const About = () => {
                     {item.label}
                   </p>
                   <p
-                    className={`text-lg font-medium ${item.label === "Email" ? "break-all sm:break-normal" : ""}`}
+                    className={`text-lg font-medium ${
+                      item.label === "Email" ? "break-all sm:break-normal" : ""
+                    }`}
                   >
                     {item.value}
                   </p>
@@ -69,36 +73,30 @@ export const About = () => {
               ))}
             </div>
 
+            {/* CV Button & Social Icons */}
             <div className="flex flex-wrap items-center gap-6">
-              <motion.a
-                href="/ayesha cv.pdf"
-            
-                rel="noopener noreferrer"
-                download
+
+              {/* CV Button with Motion One */}
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold flex items-center gap-2 shadow-lg shadow-purple-500/20"
               >
-                Download My CV <Download size={20} />
-              </motion.a>
+                <a
+                  href="/ayesha_cv.pdf"
+                  download
+                  className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold flex items-center gap-2 shadow-lg shadow-purple-500/20"
+                >
+                  <Download size={20} /> Download My CV
+                </a>
+              </motion.div>
+
+              {/* Social Icons */}
               <div className="flex gap-4">
                 {[
                   { Icon: Github, href: "https://github.com", label: "GitHub" },
-                  {
-                    Icon: Twitter,
-                    href: "https://twitter.com",
-                    label: "Twitter",
-                  },
-                  {
-                    Icon: Linkedin,
-                    href: "https://www.linkedin.com/in/ayesha-aslam-9971a9397",
-                    label: "LinkedIn",
-                  },
-                  {
-                    Icon: Facebook,
-                    href: "https://www.facebook.com/profile.php?id=61579189760363",
-                    label: "Facebook",
-                  },
+                  { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+                  { Icon: Linkedin, href: "https://www.linkedin.com/in/ayesha-aslam-9971a9397", label: "LinkedIn" },
+                  { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579189760363", label: "Facebook" },
                 ].map((social, i) => (
                   <motion.a
                     key={i}

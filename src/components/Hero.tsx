@@ -75,12 +75,12 @@ export const Hero = () => {
           className="relative block mt-12 md:mt-0"
         >
           <div className="relative z-10 w-full max-w-[400px] mx-auto aspect-square rounded-3xl overflow-hidden border border-white/10 glass animate-float">
-            <img 
-              src="/ayesha.jfif" 
-              alt="Ayesha" 
-              className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
-              referrerPolicy="no-referrer"
-            />
+            {/* ✅ Image fixed using public folder */}
+           <img 
+            src="https://khalilahmad12.github.io/cv/ayesha.jfif"
+          alt="Ayesha" 
+  className="w-full h-full object-cover opacity-80 grayscale hover:grayscale-0 transition-all duration-700"
+/>
           </div>
           {/* Decorative elements */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/30 blur-3xl rounded-full" />
