@@ -82,7 +82,7 @@ export const About = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <a
-                  href="/ayesha_cv.pdf"
+                  href="https://ayeshadeveloper14.github.io/ayesha-cv/"
                   download
                   className="px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold flex items-center gap-2 shadow-lg shadow-purple-500/20"
                 >
